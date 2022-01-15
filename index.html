@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+   
+	<input id="num1" />
+	<div id="operator_btns">
+	  <button id="plus" onClick="op='+'">+</button>
+	  <button id="minus" onClick="op='-'">-</button>
+	  <button id="multiply" onClick="op='*'">*</button>
+	  <button id="divide" onClick="op='/'" >:</button>
+	</div>
+	<input id="num2"/>
+	<br>
+	<button onclick="func()">Посчитать</button>
+    <p id="result"></p>
+
+    <br>
+    <button onClick="alert('Привет, Маша!')";>Нажми меня</button>
+
+<script>
+let op; 
+
+function func() {
+    
+  let result;
+ 
+  let num1 = Number(document.getElementById("num1").value);
+  let num2 = Number(document.getElementById("num2").value);
+
+  switch (op) {
+    case '+':
+      result = num1 + num2;
+      break;
+    case '-':
+      result = num1 - num2;
+      break;
+    case '*':
+      result = num1 * num2;
+      break;
+    case '/':
+      result = num1 / num2;
+      break;
+  }
+  document.getElementById("result").innerHTML = result;
+}
+</script>
+</body>
+</html>
